@@ -1,0 +1,44 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;color:#12315a;background:#eef3ff}
+.top{height:74px;background:white;display:flex;align-items:center;justify-content:space-between;padding:0 22px;position:sticky;top:0;z-index:10;box-shadow:0 1px 8px #0001}
+.brand{font-weight:900;font-size:25px;color:#0964d8;letter-spacing:.02em}
+.login-btn{background:#0b72f0;color:white;border:0;border-radius:12px;padding:12px 26px;font-weight:800;font-size:16px;box-shadow:0 3px 8px #0002}
+.hero{background:linear-gradient(180deg,#075bc6,#064eb0);color:white;text-align:center;padding:34px 18px 42px}
+.badge{display:inline-block;background:white;color:#075bc6;font-weight:900;padding:6px 14px;margin-bottom:16px;font-size:18px}
+h1{font-size:34px;line-height:1.35;margin:0 0 14px;font-weight:900}
+.hero p{font-size:17px;line-height:1.8;margin:0 auto 22px;max-width:560px}
+.no1{color:#ffeb3b;font-size:26px;font-weight:900;line-height:1.1;margin:10px 0 24px}
+.no1 span{font-size:74px}
+.card{background:white;color:#12315a;border-radius:8px;max-width:680px;margin:0 auto 10px;padding:22px 16px;box-shadow:0 6px 18px #0002}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.logos span{font-weight:900;font-size:20px;color:#0c71cc}
+small{opacity:.9}
+.main{padding:26px 18px}
+.panel{text-align:center;max-width:680px;margin:0 auto 26px}
+.panel h2{font-size:24px;margin:0 0 18px}
+button{cursor:pointer}
+.primary,.secondary{width:min(560px,100%);border:0;border-radius:18px;padding:20px 18px;font-size:24px;font-weight:900}
+.primary{background:#e93600;color:white;box-shadow:0 4px 8px #0002}
+.secondary{background:white;color:#0872f0;border:1px solid #dbe2f0;box-shadow:0 3px 9px #0001}
+.white{background:white;border-radius:22px;padding:24px 16px;box-shadow:0 2px 9px #0001}
+.note{color:#49617f;line-height:1.7}
+.features{max-width:680px;margin:30px auto;background:white;border-radius:22px;padding:24px;box-shadow:0 2px 9px #0001}
+.features h2{text-align:center;margin-top:0}
+.grid{display:grid;gap:14px}
+.grid div{background:#f4f7ff;border-radius:16px;padding:16px}
+.grid h3{margin:0 0 6px;color:#075bc6}
+.grid p{margin:0;line-height:1.6}
+footer{background:white;padding:28px 18px;text-align:center;color:#49617f}
+footer a{display:inline-block;margin:8px 14px;color:#0964d8;text-decoration:none}
+.modal{position:fixed;inset:0;background:#0008;display:flex;align-items:center;justify-content:center;z-index:20;padding:18px}
+.hidden{display:none}
+.modal-box{background:white;border-radius:22px;padding:24px;width:min(420px,100%);position:relative}
+.close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:30px}
+input{width:100%;padding:16px;margin:8px 0;border:1px solid #ccd6e5;border-radius:8px;font-size:16px}
+.full{font-size:20px;margin-top:10px;border-radius:12px}
+@media(max-width:520px){
+  .brand{font-size:22px}
+  h1{font-size:29px}
+  .logos{grid-template-columns:repeat(2,1fr)}
+  .no1 span{font-size:64px}
+}
