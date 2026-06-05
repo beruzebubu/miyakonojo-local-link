@@ -7,78 +7,32 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="brand">都城ローカルリンク</div>
-    <button class="login-btn" onclick="scrollToLogin()">ログイン</button>
+  <header class="search-hero">
+    <div class="logo">都城 LOCAL WORK</div>
+    <div class="search-box">
+      <div>📍 宮崎県｜都城市・三股町・曽於市</div>
+      <div>👤 職種を選択してください</div>
+      <div>🏷️ 特徴・給与・雇用形態を選択してください</div>
+      <div>🔍 キーワードを選択してください</div>
+      <button class="search-btn">検索</button>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="badge">知り合い・紹介制のローカルサイト</div>
-    <h1>都城・三股・曽於の<br>信頼できる人だけでつながる。</h1>
-    <p>仕事、店舗、職人、手伝い、地域サービス。<br>大きな求人サイトでは見つからない“近い情報”を集めます。</p>
-
-    <div class="no1">LOCAL<br><span>No.1</span></div>
-
-    <div class="card logos">
-      <span>美容室</span>
-      <span>飲食</span>
-      <span>建築</span>
-      <span>農業</span>
-      <span>配送</span>
-      <span>地域職人</span>
+  <main class="container">
+    <div class="result-head">
+      <strong>紹介求人 12件</strong>
+      <span>関連度順</span>
     </div>
-    <small>※ 掲載情報は紹介者・運営確認後に公開されます。</small>
-  </section>
 
-  <main class="main">
-    <section id="login" class="panel">
-      <h2>紹介コードをお持ちの方</h2>
-      <button class="primary" onclick="showLogin()">紹介コードで始める</button>
-    </section>
-
-    <section class="panel white">
-      <h2>紹介コードをお持ちでない方</h2>
-      <button class="secondary" onclick="showSignup()">新規登録</button>
-      <p class="note">都城市・三股町・曽於市周辺の方を優先して承認します。</p>
-    </section>
-
-    <section class="features">
-      <h2>できること</h2>
-      <div class="grid">
-        <div>
-          <h3>ローカル求人</h3>
-          <p>短時間・手伝い・正社員・業務委託まで掲載。</p>
-        </div>
-        <div>
-          <h3>職人紹介</h3>
-          <p>美容師、大工、電気、農業、修理など地域の人材を紹介。</p>
-        </div>
-        <div>
-          <h3>店舗PR</h3>
-          <p>知り合い経由で安心して店舗やサービスを知れる。</p>
-        </div>
-      </div>
-    </section>
+    <section id="jobs" class="job-list"></section>
   </main>
 
-  <div id="modal" class="modal hidden">
-    <div class="modal-box">
-      <button class="close" onclick="closeModal()">×</button>
-      <h2 id="modalTitle">ログイン</h2>
-      <input placeholder="メールアドレス" />
-      <input placeholder="パスワード" type="password" />
-      <input id="invite" placeholder="紹介コード（任意）" />
-      <button class="primary full">送信</button>
-      <p class="note">これはデモ画面です。実運用には認証・データベース設定が必要です。</p>
-    </div>
-  </div>
-
-  <footer>
-    <a href="#">利用規約</a>
-    <a href="#">プライバシーポリシー</a>
-    <a href="#">お問い合わせ</a>
-    <p>© Miyakonojo Local Link</p>
-  </footer>
+  <nav class="bottom-nav">
+    <a>🏠<br>ホーム</a>
+    <a>☆<br>保存</a>
+    <a>💬<br>相談</a>
+    <a>👤<br>マイページ</a>
+  </nav>
 
   <script src="script.js"></script>
 </body>
