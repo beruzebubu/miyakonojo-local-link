@@ -12,14 +12,26 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="みやこんじょWORK ホーム"><span class="brand-mark">MW</span><span><strong>みやこんじょWORK</strong><small>都城・三股・曽於の仕事</small></span></a>
     <button class="nav-button" id="menuButton" aria-expanded="false" aria-controls="mainNav">メニュー</button>
-    <nav id="mainNav" class="main-nav" aria-label="メインナビゲーション"><a href="#categories">職種から探す</a><a href="#jobs">求人を探す</a><a href="#instagram">Instagram作成</a><a href="employers.html">求人を掲載する</a></nav>
+    <nav id="mainNav" class="main-nav" aria-label="メインナビゲーション"><a href="#categories">職種から探す</a><a href="#jobs">求人を見る</a><a href="employers.html">求人を掲載する</a></nav>
   </header>
 
   <main id="top">
-    <section class="hero"><div class="hero-inner"><p class="eyebrow">LOCAL JOBS, REAL STORIES.</p><h1>近くで働くを、<br><span>もっと分かりやすく。</span></h1><p class="hero-copy">都城市・三股町・曽於市だけ。給与や休日だけでなく、職場の雰囲気や子育てとの両立まで見える地域求人サイトです。</p><form class="hero-search" id="heroSearch"><label><span>キーワード</span><input id="heroKeyword" type="search" placeholder="例：美容、事務、未経験"></label><label><span>エリア</span><select id="heroArea"><option value="">すべて</option><option value="都城市">都城市</option><option value="三股町">三股町</option><option value="曽於市">曽於市</option></select></label><button type="submit">求人を検索</button></form><div class="hero-stats" aria-label="サイト情報"><div><strong id="jobCountHero">0</strong><span>掲載求人</span></div><div><strong>3</strong><span>対象エリア</span></div><div><strong>0円</strong><span>求職者の利用料</span></div></div></div></section>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">LOCAL JOBS, REAL STORIES.</p>
+        <h1>近くで働くを、<br><span>もっと分かりやすく。</span></h1>
+        <p class="hero-copy">都城市・三股町・曽於市の仕事だけ。給与や休日だけでなく、職場の雰囲気まで分かる地域求人サイトです。</p>
+        <form class="hero-search" id="heroSearch">
+          <label><span>キーワード</span><input id="heroKeyword" type="search" placeholder="例：美容、事務、未経験"></label>
+          <label><span>エリア</span><select id="heroArea"><option value="">すべて</option><option value="都城市">都城市</option><option value="三股町">三股町</option><option value="曽於市">曽於市</option></select></label>
+          <button type="submit">求人を探す</button>
+        </form>
+        <div class="hero-stats" aria-label="サイト情報"><div><strong id="jobCountHero">0</strong><span>掲載求人</span></div><div><strong>3</strong><span>対象エリア</span></div><div><strong>0円</strong><span>求職者の利用料</span></div></div>
+      </div>
+    </section>
 
     <section class="section category-section" id="categories">
-      <div class="section-heading"><div><p class="eyebrow">BROWSE BY CATEGORY</p><h2>職種から探す</h2><p>カテゴリを押すと、その分野の求人だけに切り替わります。</p></div></div>
+      <div class="section-heading"><div><h2>職種から探す</h2><p>気になる職種を選ぶと、該当する求人だけを表示します。</p></div></div>
       <div class="category-grid" id="categoryCards">
         <button class="category-card" data-category="飲食・接客"><span class="category-icon">🍽️</span><strong>飲食・接客</strong><small>居酒屋・カフェ・ホール</small><b id="count-food">0件</b></button>
         <button class="category-card" data-category="美容・理容"><span class="category-icon">✂️</span><strong>美容・理容</strong><small>美容師・アシスタント</small><b id="count-beauty">0件</b></button>
@@ -30,13 +42,23 @@
       </div>
     </section>
 
-    <section class="section jobs-section" id="jobs"><div class="section-heading"><div><p class="eyebrow">FIND YOUR JOB</p><h2>求人を探す</h2></div><button class="ghost-button" id="resetFilters">条件をリセット</button></div><div class="filters" aria-label="求人検索条件"><label><span>キーワード</span><input id="keywordFilter" type="search" placeholder="職種・企業名・特徴"></label><label><span>エリア</span><select id="areaFilter"><option value="">すべて</option><option>都城市</option><option>三股町</option><option>曽於市</option></select></label><label><span>雇用形態</span><select id="typeFilter"><option value="">すべて</option><option>正社員</option><option>アルバイト・パート</option><option>業務委託</option></select></label><label><span>職種</span><select id="categoryFilter"><option value="">すべて</option></select></label><label><span>並び順</span><select id="sortFilter"><option value="recommended">おすすめ順</option><option value="new">新着順</option><option value="salary">給与が高い順</option></select></label></div><div class="quick-filters" id="quickFilters" aria-label="特徴で絞り込む"></div><div class="result-bar"><p><strong id="resultCount">0</strong>件の求人</p><label class="favorite-only"><input id="favoriteOnly" type="checkbox"> お気に入りのみ</label></div><div class="job-grid" id="jobList"></div><div class="empty-state" id="emptyState" hidden><h3>条件に合う求人がありません</h3><p>条件を減らして、もう一度検索してください。</p></div></section>
+    <section class="section jobs-section" id="jobs">
+      <div class="section-heading"><div><h2>求人を見る</h2><p><strong id="resultCount">0</strong>件の求人があります。</p></div><button class="ghost-button" id="resetFilters">条件をリセット</button></div>
+      <div class="filters simple-filters" aria-label="求人検索条件">
+        <label><span>エリア</span><select id="areaFilter"><option value="">すべて</option><option>都城市</option><option>三股町</option><option>曽於市</option></select></label>
+        <label><span>雇用形態</span><select id="typeFilter"><option value="">すべて</option><option>正社員</option><option>契約社員</option><option>アルバイト・パート</option><option>業務委託</option></select></label>
+        <label><span>職種</span><select id="categoryFilter"><option value="">すべて</option></select></label>
+      </div>
+      <div class="job-grid" id="jobList"></div>
+      <div class="empty-state" id="emptyState" hidden><h3>条件に合う求人がありません</h3><p>条件をリセットして、もう一度探してください。</p></div>
+    </section>
 
-    <section class="section guide-section" id="guide"><div class="section-heading"><div><p class="eyebrow">HOW IT WORKS</p><h2>仕事探しは3ステップ</h2></div></div><div class="steps"><article><span>01</span><h3>条件で探す</h3><p>地域・職種・働き方から、生活に合う求人を絞り込みます。</p></article><article><span>02</span><h3>職場を知る</h3><p>仕事内容だけでなく、職場の雰囲気や働く人の声まで確認します。</p></article><article><span>03</span><h3>直接応募する</h3><p>求人ページに表示された電話、メール、LINE、応募ページなどから掲載企業へ直接連絡します。</p></article></div></section>
-
-    <section class="section instagram-section" id="instagram"><div class="section-heading"><div><p class="eyebrow">FOR INSTAGRAM</p><h2>求人投稿を自動で作る</h2></div></div><div class="instagram-app"><div class="instagram-controls"><p>掲載中の求人を選ぶと、Instagramフィード向けの縦長画像（1080×1350）と投稿文を生成します。</p><label><span>求人を選択</span><select id="instagramJob"></select></label><label><span>投稿の見出し</span><input id="instagramHeadline" maxlength="34" value="地元で、長く働ける仕事。"></label><label><span>問い合わせ先</span><input id="instagramContact" maxlength="40" value="詳しくはプロフィールのリンクから"></label><div class="button-row"><button id="downloadInstagram" class="primary-button">画像を保存</button><button id="copyCaption" class="secondary-button">投稿文をコピー</button></div><p class="small-note">掲載企業が許可した写真・情報を使用してください。</p></div><div class="instagram-preview-wrap"><canvas id="instagramCanvas" width="1080" height="1350" aria-label="Instagram投稿画像のプレビュー"></canvas></div></div></section>
-
-    <section class="section employer-section" id="employers"><div class="employer-card"><div><p class="eyebrow">FOR EMPLOYERS</p><h2>地元で働きたい人に、きちんと届く求人を。</h2><p>都城市・三股町・曽於市の中小企業、店舗、個人事業主の求人掲載を募集しています。求人ページ、文章、写真、Instagram投稿用素材までまとめて整えます。</p></div><div class="employer-actions"><a class="primary-button" href="employers.html">求人掲載の案内を見る</a><a class="secondary-button" href="employers.html#apply">無料掲載モニターに申し込む</a><p class="small-note">現在、正式公開に向けた掲載企業を募集しています。</p></div></div></section>
+    <section class="section employer-section" id="employers">
+      <div class="employer-card">
+        <div><p class="eyebrow">FOR EMPLOYERS</p><h2>地元で働きたい人に、きちんと届く求人を。</h2><p>都城市・三股町・曽於市の中小企業、店舗、個人事業主の求人掲載を募集しています。求人ページの文章や写真もまとめて整えます。</p></div>
+        <div class="employer-actions"><a class="primary-button" href="employers.html">求人掲載の案内を見る</a><a class="secondary-button" href="employers.html#apply">掲載を相談する</a><p class="small-note">現在、正式公開に向けた掲載企業を募集しています。</p></div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer"><div><strong>みやこんじょWORK</strong><p>都城市・三股町・曽於市の地域求人サイト</p></div><nav><a href="employers.html">求人を掲載する</a><a href="privacy.html">プライバシーポリシー</a><a href="terms.html">利用規約</a><a href="mailto:yosuke8110@gmail.com">お問い合わせ</a></nav><small>© 2026 みやこんじょWORK</small></footer>
