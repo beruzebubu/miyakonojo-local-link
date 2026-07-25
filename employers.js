@@ -1,3 +1,8 @@
+const employerStyle = document.createElement('link');
+employerStyle.rel = 'stylesheet';
+employerStyle.href = 'employers.css';
+document.head.appendChild(employerStyle);
+
 const employerForm = document.querySelector('#employerForm');
 
 if (employerForm) {
