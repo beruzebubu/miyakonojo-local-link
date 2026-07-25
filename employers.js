@@ -38,6 +38,7 @@ if (employerForm) {
       get('benefits'),
       '',
       `希望する応募方法：${get('applyMethod')}`,
+      `希望する掲載プラン：${get('plan')}`,
       '',
       '補足・相談事項：',
       get('note'),
