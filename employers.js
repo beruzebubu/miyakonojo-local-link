@@ -46,6 +46,6 @@ if (employerForm) {
       '写真がある場合は、このメールに添付してください。'
     ].join('\n');
 
-    window.location.href = `mailto:yosuke8110@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:weeds_skillup_0128@yahoo.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
