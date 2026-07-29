@@ -11,6 +11,8 @@ if (employerForm) {
 
     const data = new FormData(employerForm);
     const get = key => (data.get(key) || '').toString().trim() || '未記入';
+    const salary = `${get('salaryType')} ${get('salaryAmount')}`;
+    const hours = `${get('startTime')}〜${get('endTime')}`;
 
     const subject = `【みやこんじょWORK】求人掲載相談｜${get('company')}`;
     const body = [
@@ -24,9 +26,10 @@ if (employerForm) {
       '',
       `募集職種：${get('job')}`,
       `雇用形態：${get('type')}`,
-      `給与：${get('salary')}`,
-      `勤務時間：${get('hours')}`,
+      `給与：${salary}`,
+      `勤務時間：${hours}`,
       `休日：${get('holidays')}`,
+      `補足条件：${get('conditionNote')}`,
       '',
       '仕事内容：',
       get('description'),
